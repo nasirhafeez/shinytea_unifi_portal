@@ -8,7 +8,6 @@ $ap = $_SESSION["ap"];
 $method = $_SESSION["method"];
 
 if ($method == "Facebook" || $method == "Google") {
-  $_SESSION['phone'] = "N/A";
   $_SESSION['dob'] = "N/A";
 }
 
@@ -16,7 +15,6 @@ $fname = $_SESSION['fname'];
 $lname = $_SESSION['lname'];
 $email = $_SESSION['email'];
 $dob = $_SESSION['dob'];
-$phone = $_SESSION['phone'];
 
 $last_updated = date("Y-m-d H:i:s");
 
@@ -58,7 +56,6 @@ if (mysqli_connect_errno()) {
 mysqli_query($con, "
 CREATE TABLE IF NOT EXISTS `$table_name` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `phone` varchar(45) NOT NULL,
   `firstname` varchar(45) NOT NULL,
   `lastname` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
@@ -70,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `$table_name` (
   UNIQUE KEY `id_UNIQUE` (`id`)
 )");
 
-mysqli_query($con, "INSERT INTO `$table_name` (phone, firstname, lastname, email, dob, mac, method, last_updated) VALUES ('$phone', '$fname', '$lname', '$email', '$dob', '$mac', '$method', '$last_updated')");
+mysqli_query($con, "INSERT INTO `$table_name` (firstname, lastname, email, dob, mac, method, last_updated) VALUES ('$fname', '$lname', '$email', '$dob', '$mac', '$method', '$last_updated')");
 
 mysqli_close($con);
 
