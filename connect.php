@@ -7,15 +7,15 @@ $mac = $_SESSION["id"];
 $ap = $_SESSION["ap"];
 $method = $_SESSION["method"];
 
-if ($method == "Facebook" || $method == "Google") {
-  $fname = $_SESSION['fname'];
-  $lname = $_SESSION['lname'];
-  $email = $_SESSION['email'];
-}
-else {
+if (isset($_POST['fname'])) {
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
   $email = $_POST['email'];
+}
+else {
+  $fname = $_SESSION['fname'];
+  $lname = $_SESSION['lname'];
+  $email = $_SESSION['email'];  
 }
 
 $last_updated = date("Y-m-d H:i:s");
