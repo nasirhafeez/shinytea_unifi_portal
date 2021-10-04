@@ -8,13 +8,15 @@ $ap = $_SESSION["ap"];
 $method = $_SESSION["method"];
 
 if ($method == "Facebook" || $method == "Google") {
-  $_SESSION['dob'] = "N/A";
+  $fname = $_SESSION['fname'];
+  $lname = $_SESSION['lname'];
+  $email = $_SESSION['email'];
 }
-
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
-$email = $_SESSION['email'];
-$dob = $_SESSION['dob'];
+else {
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $email = $_POST['email'];
+}
 
 $last_updated = date("Y-m-d H:i:s");
 
@@ -59,7 +61,6 @@ CREATE TABLE IF NOT EXISTS `$table_name` (
   `firstname` varchar(45) NOT NULL,
   `lastname` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `dob` varchar(45) NOT NULL,
   `mac` varchar(45) NOT NULL,
   `method` varchar(45) NOT NULL,
   `last_updated` varchar(45) NOT NULL,
@@ -67,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `$table_name` (
   UNIQUE KEY `id_UNIQUE` (`id`)
 )");
 
-mysqli_query($con, "INSERT INTO `$table_name` (firstname, lastname, email, dob, mac, method, last_updated) VALUES ('$fname', '$lname', '$email', '$dob', '$mac', '$method', '$last_updated')");
+mysqli_query($con, "INSERT INTO `$table_name` (firstname, lastname, email, mac, method, last_updated) VALUES ('$fname', '$lname', '$email', '$mac', '$method', '$last_updated')");
 
 mysqli_close($con);
 

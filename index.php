@@ -130,15 +130,6 @@ if ($result->num_rows >= 1) {
               </div>
             </div>
 
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" id="form_font" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-calendar"></i>
-                </span>
-              </div>
-            </div>
-
             <br>
             <div class="columns is-centered is-mobile">
               <div class="control">
