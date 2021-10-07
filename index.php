@@ -87,12 +87,8 @@ if ($result->num_rows >= 1) {
 <body>
   <div class="page">
 
-    <div class="head">
-      <br>
-      <figure id="logo">
-        <img src="logo.png">
-      </figure>
-    </div>
+    <br>
+    <img src="logo.png" class="center">
 
     <div class="main">
       <seection class="section">
@@ -138,7 +134,6 @@ if ($result->num_rows >= 1) {
                   <div class="checkbox_custom">
                     <input type="checkbox">
                     Yes, I would like to receive news, promotions, information and offers from SHINY TEA
-                    <br>
                     <div id="login" class="content is-size-6 has-text-centered">You can unsubscribe at any time.</div>
                     <div id="login" class="content is-size-6 has-text-centered">Please read our <a href="policy.php">Terms of Use</a> or Contact Us</div>
                   </div>

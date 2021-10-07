@@ -33,13 +33,19 @@ html {
   align-items: center;
 }
 
-#logo
-{
-  width: 150px;
-  height: 20px;
+.center {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  object-fit: cover;
+  width: 50%;
+}
+
+#logo
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 #login
@@ -128,9 +134,9 @@ and (max-width: 1366px)
   {
   }
 
-  #logo
+  .center
   {
-    max-width: 10%;
+    max-width: 15%;
   }
 
   .main
