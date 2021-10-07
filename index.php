@@ -97,7 +97,10 @@ if ($result->num_rows >= 1) {
     <div class="main">
       <seection class="section">
         <div class="container">
-          <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details</div>
+          <div id="login" class="content is-size-6 has-text-centered">Welcome to SHINY TEA.</div>
+          <div id="login" class="content is-size-6 has-text-centered">Log on to our network and it</div>
+          <div id="login" class="content is-size-6 has-text-centered">will automatically connect to</div>
+          <div id="login" class="content is-size-6 has-text-centered">any SHINY TEA stores</div>
           <br>
           <form id="verify" method="post" action="connect.php">
 
@@ -132,27 +135,32 @@ if ($result->num_rows >= 1) {
             <div class="columns is-centered is-mobile">
               <div class="control">
                 <label class="checkbox">
-                    <input type="checkbox" required>
-                    I agree to the <a href="policy.php">Terms of Use</a>
+                  <div class="checkbox_custom">
+                    <input type="checkbox">
+                    Yes, I would like to receive news, promotions, information and offers from SHINY TEA
+                    <br>
+                    <div id="login" class="content is-size-6 has-text-centered">You can unsubscribe at any time.</div>
+                    <div id="login" class="content is-size-6 has-text-centered">Please read our <a href="policy.php">Terms of Use</a> or Contact Us</div>
+                  </div>
                 </label>
               </div>
             </div>
 
             <div class="buttons is-centered">
-              <button id="test" class="button is-danger">Connect</button>
+              <button class="button is-dark is-rounded">CONNECT</button>
             </div>
 
           </form>
         </div>
         <br>
-        <div id="logintext" class="content has-text-centered is-size-5 has-text-weight-bold">Or login using:</div>
+        <div id="logintext" class="content has-text-centered is-size-5 has-text-weight-bold">Or Login Using</div>
         <br>
         <div class="container has-text-centered">
             <a href="<?php echo htmlspecialchars($loginUrl); ?>">
-              <i class="fab fa-facebook fa-2x"></i>
+              <i class="fab fa-facebook fa-3x"></i>
             </a>
             <a href="<?php echo htmlspecialchars($google_login_url); ?>">
-              <i class="fab fa-google fa-2x"></i>
+              <i class="fab fa-google fa-3x"></i>
             </a>
         </div>
       </seection>
