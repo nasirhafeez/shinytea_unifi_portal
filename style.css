@@ -112,9 +112,9 @@ a
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
 {
-  #logo
+  .center
   {
-    max-width: 20%;
+    max-width: 15%;
   }
 
   #logintext
