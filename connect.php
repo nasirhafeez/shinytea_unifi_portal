@@ -11,11 +11,10 @@ if (isset($_POST['fname'])) {
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
   $email = $_POST['email'];
-}
-else {
+} else {
   $fname = $_SESSION['fname'];
   $lname = $_SESSION['lname'];
-  $email = $_SESSION['email'];  
+  $email = $_SESSION['email'];
 }
 
 $last_updated = date("Y-m-d H:i:s");
@@ -91,12 +90,8 @@ mysqli_close($con);
 <body>
   <div class="page">
 
-    <div class="head">
-      <br>
-      <figure id="logo">
-        <img src="logo.png">
-      </figure>
-    </div>
+    <br>
+    <img src="logo.png" class="center">
 
     <div class="main">
       <seection class="section">

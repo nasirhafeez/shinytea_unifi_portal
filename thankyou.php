@@ -23,12 +23,8 @@ include 'parameters.php';
 <body>
   <div class="page">
 
-    <div class="head">
-      <br>
-      <figure id="logo">
-        <img src="logo.png">
-      </figure>
-    </div>
+    <br>
+    <img src="logo.png" class="center">
 
     <div class="main">
       <seection class="section">

@@ -108,7 +108,7 @@ if ($result->num_rows >= 1) {
                 </span>
               </div>
             </div>
-            
+
             <div class="field">
               <div class="control has-icons-left">
                 <input class="input" type="text" id="form_font" name="lname" placeholder="Last Name" required>
@@ -151,12 +151,12 @@ if ($result->num_rows >= 1) {
         <div id="logintext" class="content has-text-centered is-size-5 has-text-weight-bold">Or Login Using</div>
         <br>
         <div class="container has-text-centered">
-            <a href="<?php echo htmlspecialchars($loginUrl); ?>">
-              <i class="fab fa-facebook fa-3x"></i>
-            </a>
-            <a href="<?php echo htmlspecialchars($google_login_url); ?>">
-              <i class="fab fa-google fa-3x"></i>
-            </a>
+          <a href="<?php echo htmlspecialchars($loginUrl); ?>">
+            <i class="fab fa-facebook fa-3x"></i>
+          </a>
+          <a href="<?php echo htmlspecialchars($google_login_url); ?>">
+            <i class="fab fa-google fa-3x"></i>
+          </a>
         </div>
       </seection>
     </div>
