@@ -17,6 +17,23 @@ if (isset($_POST['fname'])) {
   $email = $_SESSION['email'];
 }
 
+switch ($ap) {
+  // Nasir's Test AP
+  case "44:d9:e7:0a:80:43":
+    $sitename = 'Nasir';
+    break;
+
+  // Site ST4
+  case "68:d7:9a:89:ca:20":
+    $sitename = 'ST4';
+    break;
+
+  // Site ST5
+  case "68:d7:9a:c6:1b:95":
+    $sitename = 'ST5';
+    break;
+}
+
 $last_updated = date("Y-m-d H:i:s");
 
 /*
@@ -62,12 +79,13 @@ CREATE TABLE IF NOT EXISTS `$table_name` (
   `email` varchar(45) NOT NULL,
   `mac` varchar(45) NOT NULL,
   `method` varchar(45) NOT NULL,
+  `sitename` varchar(45) NOT NULL,
   `last_updated` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 )");
 
-mysqli_query($con, "INSERT INTO `$table_name` (firstname, lastname, email, mac, method, last_updated) VALUES ('$fname', '$lname', '$email', '$mac', '$method', '$last_updated')");
+mysqli_query($con, "INSERT INTO `$table_name` (firstname, lastname, email, mac, method, sitename, last_updated) VALUES ('$fname', '$lname', '$email', '$mac', '$method', '$sitename', '$last_updated')");
 
 mysqli_close($con);
 
