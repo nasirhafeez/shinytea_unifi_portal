@@ -39,7 +39,13 @@ switch ($ap) {
   case "68:d7:9a:c6:0f:2e":
     $sitename = 'ST2';
     break;
-}
+
+  // Site ST6
+  case "78:45:58:10:c3:ad":
+    $sitename = 'ST6';
+    break;
+
+  }
 
 $last_updated = date("Y-m-d H:i:s");
 
